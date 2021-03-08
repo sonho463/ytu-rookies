@@ -1,0 +1,515 @@
+body{
+	font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+}
+
+section {
+	max-width: 90%;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	padding-top: 50px;
+}
+
+// フォントサイズ
+.font-sr {
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	line-height: 2.1;
+}
+
+.font-sm {
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	line-height: 2.1;
+}
+
+.font-md {
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	line-height: 2;
+}
+
+.font-lr {
+	font-size: 20px;
+	letter-spacing: 0.005em;
+	font-weight: 400;
+}
+
+.font-lg {
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+
+
+// マージン・パディング
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-md {
+	margin-bottom: 56px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+// 要素中央揃え
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+// 箇条書きスタイル消す
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+// emシリーズ
+
+.yellow-line {
+	background: linear-gradient(transparent 60%, yellow 0%)
+}
+
+//　各セクション見出し
+
+.heading{
+	// position: relative;
+	// width: 90%;
+	// margin: 50px auto;
+
+
+	img{
+		width: 33px;
+		// position: absolute;
+		// left: -5px;
+		// top: -15px;
+		z-index: 1;
+	}
+
+	h2 {
+		line-height: 0.8;
+		z-index: 99;
+		font-size: 28px;
+	}
+}
+
+// -------------
+// header
+// -------------
+
+
+.header__nav-bar {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	// padding: 0 5%;
+}
+
+.header__logo > img{
+	// position: absolute;
+	// top: 30px;
+	// left: 10px;
+	height: 50px;
+	// z-index: 10;
+}
+
+.header {
+	background-color: $--main-bg-cSkyblue;
+	color: $--main-font-cBlue;
+	height: 300px;
+	width: 100%;
+	position: relative;
+}
+
+
+// -------------
+// ハンバーガーメニュー
+// -------------
+
+.sp-menu{
+	z-index: 30;
+	width: 50px;
+	height: 50px;
+	background-color: #1470A3;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	& span {
+		background-color: $--main-font-cWhite;
+		width: 25px;
+		height: 2px;
+		margin-bottom: 8px;
+		display: block;
+		transition: 1s;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sp-menu-open {
+	& > span {
+		&:nth-child(1) {
+			transform: translateY(10px) rotate(135deg);
+		}
+		&:nth-child(2) {
+			transform: translateY(-14px) scaleX(0);
+		}
+		&:nth-child(3) {
+			transform: translateY(-10px) rotate(-135deg);
+		}
+	}
+}
+
+.menu-list {
+	z-index: 20;
+	transition: 1s;
+	// display: none;
+	visibility: hidden;
+	transform: scaleX(0);
+	// transform: translateX(1000px);
+	transform-origin: right;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	top: -50px;
+	text-align: center;
+	left: 0
+	& ul {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 45%;
+		transform: translate(-50% , -50%);
+
+	}
+}
+
+.menu-list-open{
+	transform: scaleX(1);
+	visibility: visible;
+	// transform: translateX(0);
+	// display: block;
+}
+
+.deskTop-menu {
+	display: none;
+}
+
+// ---------------
+// ヘッダータイトル
+// ---------------
+.main-title {
+	padding-top: 0;
+	background-color: yellow;
+	height: 100%;
+	background-image: url(/public/img/header-img.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&::before{
+		display: block;
+		position: absolute;
+
+		background-color: rgba(0,0,0,0.4);
+		content: '';
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.text-wrapper {
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	color: $--main-font-cWhite;
+}
+
+// ----------------
+// メッセージ
+// ----------------
+.message {
+	h2 {
+		background-color: $--main-bg-cBlack;
+		color: $--main-font-cWhite;
+		line-height: 1.2;
+		padding: 10px;
+		p {
+			text-align: justify;
+		}
+	}
+}
+
+// ---------------
+// About
+// ---------------
+
+
+
+#mark {
+	width: 33px;
+	position: absolute;
+	left: -5px;
+	top: -15px;
+	z-index: 1;
+}
+
+
+// -------------
+// prologue
+// -------------
+
+.prologue__message01, .prologue__message02{
+	background: linear-gradient(to left, $--main-bg-cCream 80%, #fff 20%);
+	padding: 40px 0;
+	p{
+		margin-left: 25%;
+	}
+}
+
+
+
+
+// -------------
+// Rough-Act
+// -------------
+
+.rough-act__bg {
+	background-color: $--main-bg-cSkyblue;
+}
+
+.rough-act {
+	background-color: $--main-bg-cSkyblue;
+	margin-bottom: 200px;
+}
+
+.illust {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $--main-bg-cSkyblue;
+	// background-image: url(./img/circle-arrow@2x.png);
+	background-image: url(/public/img/circle-arrow@2x.png);
+	background-size: 140%;
+	background-repeat: no-repeat;
+	background-position-x: 75%;
+	background-position-y: 30%;
+	div {
+		:first-child{
+			margin-bottom: 24px;
+
+		}
+	}
+}
+
+.rough-act__img {
+	width: 150px;
+}
+
+.box-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		margin-right: 20px;
+	}
+	p {
+		width: 40%;
+	}
+}
+
+.box-wrapper {
+	display: flex;
+	justify-content: space-around;
+	p{
+		width:100px;
+	}
+}
+
+.box-column > p {
+	width: 150px;
+}
+
+.container {
+  position: relative;
+  background: $--main-bg-cSkyblue;
+  height: 30vh;
+	z-index: -1;
+}
+
+.wave {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  background: $--main-bg-cSkyblue;
+  bottom: -30%;
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: #fff;
+  right: -1.5%;
+  top: 60%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+	background: $--main-bg-cSkyblue;
+  left: -2%;
+  top: 40%;
+}
+
+
+
+// -------------
+// 加入者の思い
+// -------------
+
+.members-thought{
+	article {
+		width: 100%;
+		padding: 10%;
+		margin-bottom: 30px;
+		box-sizing: border-box;
+		border: solid 2px $--main-font-cGray;
+		background-color: $--main-bg-cCream;
+
+	}
+}
+
+
+
+// -------------
+// 組合費はどう使われているの？
+// -------------
+
+#myChart {
+	// background-color: aquamarine;
+	max-width: 400px;
+}
+
+
+// -------------
+// 専門部という活動があります
+// -------------
+
+.specialty__box {
+	width: 300px;
+	img {
+		width: 100%;
+	}
+}
+
+
+
+// -------------
+// 具体的にはこんなことをしています
+// -------------
+
+
+// -------------
+// よくある疑問に答えます
+// -------------
+
+.question {
+	background-color: $--main-bg-cCream;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	& > img {
+		margin-right: 5px;
+	}
+	& > p{
+		font-size: 20px;
+		margin: 0;
+	}
+}
+
+.cp_box *, .cp_box *:before, .cp_box *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cp_box {
+	position: relative;
+
+}
+
+.cp_box label {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+	height: 140px; /* グラデーションの高さ */
+	cursor: pointer;
+	text-align: center;
+	/* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+	background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+}
+.cp_box input:checked + label {
+	background: inherit; /* 開いた時にグラデーションを消す */
+}
+.cp_box label:after {
+	line-height: 2.5rem;
+	position: absolute;
+	z-index: 2;
+	bottom: -20px;
+	left: 50%;
+	width: 16rem;
+	font-family: FontAwesome;
+	content: '\f13a'' 続きをよむ';
+	transform: translate(-50%, 0);
+	letter-spacing: 0.05em;
+	color: #ffffff;
+	border-radius: 20px;
+	background-color: $--main-font-cBlue;
+}
+.cp_box input {
+	display: none;
+}
+.cp_box .cp_container {
+	overflow: hidden;
+	height: 150px; /* 開く前に見えている部分の高さ */
+	transition: all 0.5s;
+}
+.cp_box input:checked + label {
+	/* display: none ; 閉じるボタンを消す場合解放 */
+}
+.cp_box input:checked + label:after {
+	font-family: FontAwesome;
+	content: '\f139'' 閉じる';
+}
+.cp_box input:checked ~ .cp_container {
+	height: auto;
+	padding-bottom: 80px; /* 閉じるボタンのbottomからの位置 */
+	transition: all 0.5s;
+}
+
+.cp_container {
+	padding: 10px;
+}
+
+.test {
+	height: 1000px;
+}
