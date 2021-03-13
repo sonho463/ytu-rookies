@@ -176,13 +176,17 @@ li {
   height: 120%;
   position: absolute;
   top: -50px;
+  left: 5%;
   text-align: center;
-  left: 0 .menu-list ul;
-  left-position: absolute;
-  left-display: block;
-  left-top: 50%;
-  left-left: 45%;
-  left-transform: translate(-50%, -50%);
+}
+
+.menu-list ul {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .menu-list-open {

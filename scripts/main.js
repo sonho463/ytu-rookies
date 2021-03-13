@@ -9,6 +9,7 @@ sp_menu.addEventListener("click", function () {
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: "doughnut",
+	plugins: [ChartDataLabels],
   data: {
     labels: [
       "大阪教組・日教組で働く人・とりくみの費用",
@@ -47,13 +48,14 @@ var myChart = new Chart(ctx, {
 			display: true,
 			text: '組合費のおおまかな使いみち',
 			fontSize: 20,
+			position: 'top',
 		},
 		legend: {
+			position: 'bottom',
 			labels: {
 				boxWidth: 10,
-
 			}
-		}
+		},
 	},
 });
 
