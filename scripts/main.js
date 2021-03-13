@@ -9,20 +9,19 @@ sp_menu.addEventListener("click", function () {
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: "doughnut",
-	plugins: [ChartDataLabels],
+	// plugins: [ChartDataLabels],
   data: {
     labels: [
       "大阪教組・日教組で働く人・とりくみの費用",
       "八尾教組で働く人のための費用",
-      "事務所維持のための費用",
-      "八尾の分会や評議員の活動のための費用",
-      "八尾のとりくみのための費用",
-      "その他の費用",
+      "事務所維持",
+      "八尾のとりくみ",
+      "他",
     ],
     datasets: [
       {
         label: "八尾教組の組合費利用のうちわけ",
-        data: [50, 23, 13, 6, 4, 4],
+        data: [50, 23, 13, 10, 4],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -55,6 +54,18 @@ var myChart = new Chart(ctx, {
 			labels: {
 				boxWidth: 10,
 			}
+		},
+		plugins: {
+			labels: [
+				{
+				render: 'label',
+				position: 'outside',
+				arc: true,
+				},
+				{
+					render: 'percentage'
+				}
+			]
 		},
 	},
 });

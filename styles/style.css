@@ -176,7 +176,6 @@ li {
   height: 120%;
   position: absolute;
   top: -50px;
-  left: 5%;
   text-align: center;
 }
 
@@ -380,6 +379,10 @@ li {
   background-color: #FAF8D2;
 }
 
+.members-thought article img {
+  width: 100%;
+}
+
 #myChart {
   max-width: 400px;
 }
@@ -435,15 +438,26 @@ li {
 }
 
 .specialty__text {
-  width: 90vw;
+  width: 90%;
   margin: 0 auto;
 }
 
 .specialty__text p {
+  margin-left: 15%;
+  padding-right: 10%;
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
   display: block;
+}
+
+.specific-activities article img {
+  width: 100%;
+}
+
+.spe-act {
+  margin-bottom: 80px;
+  border-top: solid 2px #707070;
 }
 
 .question {

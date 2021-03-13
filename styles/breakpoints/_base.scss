@@ -186,7 +186,6 @@ li {
 	height: 120%;
 	position: absolute;
 	top: -50px;
-	left: 5%;
 	text-align: center;
 
 	& ul {
@@ -412,9 +411,14 @@ li {
 		box-sizing: border-box;
 		border: solid 2px $--main-font-cGray;
 		background-color: $--main-bg-cCream;
+		img {
+			width: 100%;
+		}
 
 	}
 }
+
+
 
 
 
@@ -470,15 +474,16 @@ li {
 }
 
 .specialty__text {
-	width: 90vw;
+	width: 90%;
 	margin: 0 auto;
 	p{
+		margin-left: 15%;
+		padding-right: 10%;
 		font-size: 16px;
 		line-height: 1.6;
 		text-align: justify;
 		display: block;
 	}
-	// margin: 0 auto;
 }
 
 
@@ -487,6 +492,20 @@ li {
 // -------------
 // 具体的にはこんなことをしています
 // -------------
+
+
+.specific-activities {
+	article {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.spe-act {
+	margin-bottom: 80px;
+	border-top: solid 2px $--main-font-cGray;
+}
 
 
 // -------------
