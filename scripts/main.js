@@ -11,7 +11,7 @@ var myChart = new Chart(ctx, {
   type: "doughnut",
   data: {
     labels: [
-      "大阪教組・日教組で働く人・とりくみのための費用",
+      "大阪教組・日教組で働く人・とりくみの費用",
       "八尾教組で働く人のための費用",
       "事務所維持のための費用",
       "八尾の分会や評議員の活動のための費用",
@@ -42,6 +42,19 @@ var myChart = new Chart(ctx, {
       },
     ],
   },
+	options: {
+		title: {
+			display: true,
+			text: '組合費のおおまかな使いみち',
+			fontSize: 20,
+		},
+		legend: {
+			labels: {
+				boxWidth: 10,
+
+			}
+		}
+	},
 });
 
 $(".qa-list dd").hide();

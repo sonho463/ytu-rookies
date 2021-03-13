@@ -400,10 +400,11 @@ li {
 .specialty p {
   margin-left: 25%;
   padding-right: 20px;
+  text-align: justify;
 }
 
 .swiper-container {
-  width: 300px;
+  width: 100%;
   height: auto;
 }
 
@@ -430,7 +431,7 @@ li {
 }
 
 .specialty__text {
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -455,7 +456,7 @@ li {
 }
 
 .question > img {
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 .question > p {
