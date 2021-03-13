@@ -280,11 +280,29 @@ li {
 }
 
 
+.separator-skyblue-top {
+	height: 100px;
+	width: 100%;
+	background-color: $--main-bg-cSkyblue;
+	border-top-right-radius: 100px;
+}
+
+.separator-skyblue-bottom {
+	height: 100px;
+	width: 100%;
+	background-color: $--main-bg-cSkyblue;
+	border-bottom-left-radius: 100px;
+}
+
+
+
 
 
 // -------------
 // Rough-Act
 // -------------
+
+
 
 .rough-act__bg {
 	background-color: $--main-bg-cSkyblue;
@@ -292,7 +310,7 @@ li {
 
 .rough-act {
 	background-color: $--main-bg-cSkyblue;
-	margin-bottom: 200px;
+	margin-bottom: 0;
 }
 
 .illust {
@@ -417,18 +435,30 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: linear-gradient(to left, $--main-bg-cCream 90%, #fff 10%);
+	padding: 40px 0;
+	border-radius: 20px;
+	p{
+		margin-left: 25%;
+		padding-right: 20px;
+	}
 }
+
+.swiper-container {
+	width: 300px;
+	height: auto;
+}
+
+
 .specialty__box {
 	width: 100%;
+
 	h3 {
 		margin: 0;
 	}
 	img {
 		width:50px;
 		margin-right: 10px;
-	}
-	p{
-		text-align: justify;
 	}
 }
 
@@ -438,8 +468,15 @@ li {
 }
 
 .specialty__text {
-	font-size: 16px;
-	line-height: 1.6;
+	width: 80vw;
+	margin: 0 auto;
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		text-align: justify;
+		display: block;
+	}
+	// margin: 0 auto;
 }
 
 
@@ -560,4 +597,35 @@ li {
 .qa-list dl dd p:first-child{
 	margin-top: 0;
 }
+}
+
+
+// -------------
+// Contact
+// -------------
+
+.sns-wrapper {
+	display: flex;
+	margin-top: 40px;
+}
+
+.contact__heading3{
+	font-size: 20px;
+}
+
+.sns-icon{
+	font-size: 24px;
+	text-align: center;
+	h4{
+		color: $--main-bg-cBlack;
+	}
+	img{
+		width: 50%;
+	}
+}
+
+.contact-description{
+	h4{
+		font-size: 20px;
+	}
 }
