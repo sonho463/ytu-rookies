@@ -2,6 +2,7 @@ body{
 	font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 	max-width: 960px;
 	margin: 0 auto;
+	text-align: justify;
 }
 
 section {
@@ -283,7 +284,7 @@ li {
 
 .prologue__message01, .prologue__message02{
 	background: linear-gradient(to left, $--main-bg-cCream 80%, #fff 20%);
-	padding: 40px 0;
+	padding: 40px 20px;
 	p{
 		margin-left: 25%;
 	}
@@ -370,8 +371,38 @@ li {
 	width: 150px;
 }
 
+// -------------
+// 具体的にはこんなことをしています
+// -------------
 
 
+.specific-activities {
+	article {
+		text-align: justify;
+		img {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+}
+
+.spe-act {
+	margin-bottom: 80px;
+	border-top: solid 2px $--main-font-cGray;
+}
+
+
+// -------------
+// 組合費はどう使われているの？
+// -------------
+.usage-union-dues__bg {
+	background-color: $--main-bg-cSkyblue;
+	text-align: justify;
+}
+
+#myChart {
+	max-width: 400px;
+}
 
 // -------------
 // 加入者の思い
@@ -387,6 +418,7 @@ li {
 		background-color: $--main-bg-cCream;
 		img {
 			width: 100%;
+			margin-bottom: 32px;
 		}
 
 	}
@@ -396,14 +428,6 @@ li {
 
 
 
-// -------------
-// 組合費はどう使われているの？
-// -------------
-
-#myChart {
-	// background-color: aquamarine;
-	max-width: 400px;
-}
 
 
 // -------------
@@ -417,6 +441,7 @@ li {
 	background: linear-gradient(to left, $--main-bg-cCream 90%, #fff 10%);
 	padding: 40px 0;
 	border-radius: 20px;
+	margin-bottom: 100px;
 	p{
 		margin-left: 15%;
 		padding-right: 20px;
@@ -463,24 +488,6 @@ li {
 
 
 
-// -------------
-// 具体的にはこんなことをしています
-// -------------
-
-
-.specific-activities {
-	article {
-		img {
-			width: 100%;
-			max-width: 300px;
-		}
-	}
-}
-
-.spe-act {
-	margin-bottom: 80px;
-	border-top: solid 2px $--main-font-cGray;
-}
 
 
 // -------------
@@ -505,11 +512,12 @@ li {
 
 
 .qa {
-	background-color: #FAF8D2;
+	background-color: $--main-bg-cCream;
 	border-radius: 10px;
 	dd{
 		p{
-			padding-right: 50px;
+			padding-right: 10px;
+			text-align: justify;
 		}
 	}
 }
