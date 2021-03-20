@@ -1,5 +1,7 @@
 body{
 	font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 section {
@@ -13,13 +15,13 @@ section {
 .font-sr {
 	font-size: 14px;
 	letter-spacing: 0.05em;
-	line-height: 2.1;
+	line-height: 1.8;
 }
 
 .font-sm {
 	font-size: 16px;
 	letter-spacing: 0.05em;
-	line-height: 2.1;
+	line-height: 1.8;
 }
 
 .font-md {
@@ -76,7 +78,11 @@ li {
 // emシリーズ
 
 .yellow-line {
-	background: linear-gradient(transparent 60%, yellow 0%)
+	background: linear-gradient(transparent 60%, gold 0%);
+}
+
+.blue-line {
+	background: linear-gradient(transparent 60%, lightcyan 0%);;
 }
 
 //　各セクション見出し
@@ -84,7 +90,7 @@ li {
 .heading{
 	// position: relative;
 	// width: 90%;
-	// margin: 50px auto;
+	margin-bottom: 50px;
 
 
 	img{
@@ -102,13 +108,14 @@ li {
 	}
 }
 
+
 // -------------
 // header
 // -------------
 
 
 .header__nav-bar {
-	height: 50px;
+	height: auto;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -194,6 +201,9 @@ li {
 		top: 50%;
 		left: 45%;
 		transform: translate(-50% , -50%);
+		li{
+			margin-bottom: 20px;
+		}
 
 	}
 }
@@ -314,7 +324,7 @@ li {
 }
 
 .illust {
-	max-width: 700px;
+	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: $--main-bg-cSkyblue;
@@ -360,42 +370,6 @@ li {
 	width: 150px;
 }
 
-.container {
-  position: relative;
-  background: $--main-bg-cSkyblue;
-  height: 30vh;
-	z-index: -1;
-}
-
-.wave {
-  position: absolute;
-  height: 120px;
-  width: 100%;
-  background: $--main-bg-cSkyblue;
-  bottom: -30%;
-}
-
-.wave::before, .wave::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-}
-
-.wave::before {
-  width: 55%;
-  height: 109%;
-  background-color: #fff;
-  right: -1.5%;
-  top: 60%;
-}
-.wave::after {
-  width: 55%;
-  height: 100%;
-	background: $--main-bg-cSkyblue;
-  left: -2%;
-  top: 40%;
-}
 
 
 
@@ -444,7 +418,7 @@ li {
 	padding: 40px 0;
 	border-radius: 20px;
 	p{
-		margin-left: 25%;
+		margin-left: 15%;
 		padding-right: 20px;
 		text-align: justify;
 	}
@@ -498,6 +472,7 @@ li {
 	article {
 		img {
 			width: 100%;
+			max-width: 300px;
 		}
 	}
 }
@@ -532,6 +507,11 @@ li {
 .qa {
 	background-color: #FAF8D2;
 	border-radius: 10px;
+	dd{
+		p{
+			padding-right: 50px;
+		}
+	}
 }
 
 .qa-list dl {
@@ -539,10 +519,11 @@ li {
 	margin-top: 10px;
 	padding: 5px;
 	cursor: pointer;
-	// border-bottom: 1px solid #000;
+	border-bottom: 1px solid #000;
 }
 .qa-list dl::before {
 	position: absolute;
+	z-index: 1;
 	top: 35px;
 	right: 35px;
 	display: block;
@@ -649,4 +630,9 @@ li {
 	h4{
 		font-size: 20px;
 	}
+}
+
+.g-form__box{
+	width: 100%;
+	height: 2000px;
 }
