@@ -57,7 +57,23 @@
 // header
 // -------------
 .deskTop-menu {
-	display: block;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 60%;
+	ul{
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		}
+	a {
+		width: 20%;
+	}
+	li{
+		font-size: 12px;
+		color: $--main-font-cBlue;
+		margin-right: 15px;
+	}
 }
 
 .header__logo{
@@ -107,6 +123,7 @@
 // -------------
 .spe-act {
 	display: flex;
+	padding-top: 80px;
 	> div{
 		flex: 1;
 	}
