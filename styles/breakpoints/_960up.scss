@@ -107,4 +107,7 @@
 // -------------
 .spe-act {
 	display: flex;
+	> div{
+		flex: 1;
+	}
 }
