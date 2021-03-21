@@ -384,6 +384,10 @@ li {
   text-align: justify;
 }
 
+.usage-union-dues__text p:last-child {
+  margin-bottom: 0;
+}
+
 #myChart {
   max-width: 400px;
 }
@@ -427,7 +431,7 @@ li {
   text-align: justify;
 }
 
-.specialty__heading {
+.spe-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,10 +441,13 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 32px;
+  cursor: pointer;
 }
 
-.specialty__heading img {
+.spe-heading img {
   width: 50px;
+  margin-right: 5px;
 }
 
 .spe-modal {
@@ -470,14 +477,18 @@ li {
   z-index: 1;
 }
 
-#nursing-modal {
+#nursing-modal,
+#kinder-modal,
+#nutritionist-modal,
+#school-clerical-modal,
+#young-modal {
   background: #fff;
   color: #555;
-  width: 300px;
+  width: 100%;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -486,7 +497,11 @@ li {
   transition: 0.6s;
 }
 
-#nursing-modal p {
+#nursing-modal p,
+#kinder-modal p,
+#nutritionist-modal p,
+#school-clerical-modal p,
+#young-modal p {
   margin: 0 0 20px;
 }
 
@@ -494,11 +509,24 @@ li {
   display: none;
 }
 
-#nursing-modal.hidden {
+#nursing-modal.hidden,
+#kinder-modal.hidden,
+#nutritionist-modal.hidden,
+#school-clerical-modal.hidden,
+#young-modal.hidden {
   -webkit-transform: translate(0, 100px);
           transform: translate(0, 100px);
   visibility: hidden;
   opacity: 0;
+}
+
+.spe-heading__wrapper {
+  width: 100%;
+}
+
+.spe__article {
+  position: relative;
+  width: 100%;
 }
 
 .question {
