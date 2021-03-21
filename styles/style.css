@@ -8,8 +8,6 @@ body {
 section {
   max-width: 90%;
   margin: 0 auto;
-  margin-bottom: 100px;
-  padding-top: 50px;
 }
 
 .font-sr {
@@ -117,7 +115,7 @@ li {
 }
 
 .header {
-  background-color: #ffffff;
+  background-color: #D2F1FA;
   color: #1470A3;
   height: 300px;
   width: 100%;
@@ -264,6 +262,11 @@ li {
   padding: 40px 20px;
 }
 
+.prologue__message01 h2, .prologue__message02 h2 {
+  padding: 10px;
+  background-color: #FAF8D2;
+}
+
 .prologue__message01 p, .prologue__message02 p {
   margin-left: 25%;
 }
@@ -271,31 +274,30 @@ li {
 .separator-skyblue-top {
   height: 100px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #D2F1FA;
   border-top-right-radius: 100px;
 }
 
 .separator-skyblue-bottom {
   height: 100px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #D2F1FA;
   border-bottom-left-radius: 100px;
 }
 
 .rough-act__bg {
-  background-color: #ffffff;
+  background-color: #D2F1FA;
 }
 
 .rough-act {
-  background-color: #ffffff;
-  margin-bottom: 0;
+  background-color: #D2F1FA;
 }
 
 .illust {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff;
+  background-color: #D2F1FA;
   background-image: url(/img/circle-arrow@2x.png);
   background-size: 140%;
   background-repeat: no-repeat;
@@ -361,8 +363,24 @@ li {
   border-top: solid 2px #707070;
 }
 
+.spe-act p {
+  line-height: 2.0;
+}
+
+.spe-act__text-wrapper h3 {
+  font-size: 28px;
+}
+
+.spe-act__text-wrapper h4 {
+  font-size: 20px;
+}
+
+.study-meeting-list {
+  margin-top: 28px;
+}
+
 .usage-union-dues__bg {
-  background-color: #ffffff;
+  background-color: #D2F1FA;
   text-align: justify;
 }
 
@@ -400,13 +418,17 @@ li {
   background: linear-gradient(to left, #D2F1FA 90%, #fff 10%);
   padding: 40px 0;
   border-radius: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .specialty p {
   margin-left: 15%;
   padding-right: 20px;
   text-align: justify;
+}
+
+.specilty-swiper {
+  margin-bottom: 80px;
 }
 
 .swiper-container {
@@ -567,6 +589,8 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 40px;
 }
 
@@ -584,7 +608,7 @@ li {
 }
 
 .sns-icon img {
-  width: 50%;
+  width: 80px;
 }
 
 .contact-description h4 {
@@ -593,12 +617,77 @@ li {
 
 .g-form__box {
   width: 100%;
-  height: 1300px;
+  height: 1800px;
+}
+
+.modal {
+  position: relative;
+  font-size: 16px;
+}
+
+#open,
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px;
+  margin: 16px auto 0;
+  background: #4caf50;
+  color: white;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#nursing {
+  background: #fff;
+  color: #555;
+  width: 300px;
+  padding: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#modal p {
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  visibility: hidden;
+  -webkit-transform: translate(0, -500px);
+          transform: translate(0, -500px);
+}
+
+#close.hidden {
+  display: none;
 }
 
 @media (min-width: 600px) {
   .illust {
     background-size: 100%;
+  }
+  .g-form__box {
+    height: 800px;
   }
 }
 
@@ -676,7 +765,7 @@ li {
     display: none;
   }
   .message p {
-    margin-left: 20%;
+    margin-left: 5%;
   }
   .usage-union-dues article {
     display: -webkit-box;
@@ -697,6 +786,9 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .g-form__box {
+    height: 1400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

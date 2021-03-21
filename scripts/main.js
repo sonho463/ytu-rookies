@@ -113,3 +113,31 @@ var mySwiper = new Swiper ('.swiper-container', {
 	},
 
 });
+
+
+{
+	const open = document.getElementById('open');
+	const close = document.getElementById('close');
+	const nursing = document.getElementById('nursing');
+	const mask = document.getElementById('mask');
+
+	open.addEventListener('click',function(){
+	nursing.classList.remove('hidden');
+	mask.classList.remove('hidden');
+	close.classList.remove('hidden');
+	});
+
+	close.addEventListener('click',function(){
+		nursing.classList.add('hidden');
+		mask.classList.add('hidden');
+		close.classList.add('hidden');
+	});
+
+	mask.addEventListener('click',function(){
+		nursing.classList.add('hidden');
+		mask.classList.add('hidden');
+		close.classList.add('hidden');
+	});
+
+
+}
