@@ -396,6 +396,7 @@ li {
   width: 100%;
   padding: 10%;
   margin-bottom: 30px;
+  min-height: 900px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: solid 2px #707070;
@@ -420,15 +421,38 @@ li {
           align-items: center;
   background: -webkit-gradient(linear, right top, left top, color-stop(90%, #D2F1FA), color-stop(10%, #fff));
   background: linear-gradient(to left, #D2F1FA 90%, #fff 10%);
-  padding: 40px 0;
+  padding: 0;
   border-radius: 20px;
   margin-bottom: 50px;
+}
+
+.specialty .heading {
+  margin-bottom: 25px;
 }
 
 .specialty p {
   margin-left: 15%;
   padding-right: 20px;
   text-align: justify;
+}
+
+.spe-heading__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.spe-heading__wrapper div:first-child {
+  margin-top: 10px;
+}
+
+.spe__article {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
 }
 
 .spe-heading {
@@ -441,13 +465,19 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 32px;
+  width: 100%;
   cursor: pointer;
+  border: solid 1px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
 }
 
 .spe-heading img {
   width: 50px;
   margin-right: 5px;
+}
+
+.spe-heading:hover {
+  background-color: #FAF8D2;
 }
 
 .spe-modal {
@@ -481,14 +511,15 @@ li {
 #kinder-modal,
 #nutritionist-modal,
 #school-clerical-modal,
-#young-modal {
+#young-modal,
+#etc-modal {
   background: #fff;
   color: #555;
   width: 100%;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -501,7 +532,8 @@ li {
 #kinder-modal p,
 #nutritionist-modal p,
 #school-clerical-modal p,
-#young-modal p {
+#young-modal p,
+#etc-modal p {
   margin: 0 0 20px;
 }
 
@@ -513,20 +545,12 @@ li {
 #kinder-modal.hidden,
 #nutritionist-modal.hidden,
 #school-clerical-modal.hidden,
-#young-modal.hidden {
+#young-modal.hidden,
+#etc-modal.hidden {
   -webkit-transform: translate(0, 100px);
           transform: translate(0, 100px);
   visibility: hidden;
   opacity: 0;
-}
-
-.spe-heading__wrapper {
-  width: 100%;
-}
-
-.spe__article {
-  position: relative;
-  width: 100%;
 }
 
 .question {
@@ -652,7 +676,7 @@ li {
 }
 
 .contact__heading3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .sns-icon {
@@ -784,6 +808,18 @@ li {
   }
   .g-form__box {
     height: 1400px;
+  }
+  .spe-heading__wrapper {
+    background-color: white;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .spe-heading__wrapper div:first-child {
+    margin-top: 0;
+  }
+  .spe__article {
+    width: 45%;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

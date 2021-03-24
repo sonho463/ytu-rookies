@@ -442,6 +442,7 @@ li {
 		width: 100%;
 		padding: 10%;
 		margin-bottom: 30px;
+		min-height: 900px;
 		box-sizing: border-box;
 		border: solid 2px $--main-font-cGray;
 		background-color: $--main-bg-cSkyblue;
@@ -468,9 +469,12 @@ li {
 	flex-direction: column;
 	align-items: center;
 	background: linear-gradient(to left, $--main-bg-cSkyblue 90%, #fff 10%);
-	padding: 40px 0;
+	padding: 0;
 	border-radius: 20px;
 	margin-bottom: 50px;
+	.heading {
+		margin-bottom: 25px;
+	}
 
 	p{
 		margin-left: 15%;
@@ -478,16 +482,39 @@ li {
 		text-align: justify;
 	}
 }
+
+.spe-heading__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	div {
+		&:first-child{
+			margin-top: 10px;
+		}
+	}
+}
+
+.spe__article{
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+}
 .spe-heading {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 32px;
+	width: 100%;
+	// margin-bottom: 32px;
 	cursor: pointer;
+	border: solid 1px rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
 	img {
 		width: 50px;
 		margin-right: 5px;
 	}
+	&:hover {
+		background-color: $--main-bg-cCream
+		}
 }
 
 .spe-modal {
@@ -521,14 +548,15 @@ li {
 #kinder-modal,
 #nutritionist-modal,
 #school-clerical-modal,
-#young-modal {
+#young-modal,
+#etc-modal {
   background: #fff;
   color: #555;
   width: 100%;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -547,20 +575,14 @@ li {
 #kinder-modal.hidden,
 #nutritionist-modal.hidden,
 #school-clerical-modal.hidden,
-#young-modal.hidden {
+#young-modal.hidden,
+#etc-modal.hidden {
 	transform: translate(0,100px);
 	visibility: hidden;
 	opacity: 0;
 }
 
-.spe-heading__wrapper{
-	width: 100%;
-}
 
-.spe__article{
-	position: relative;
-	width: 100%;
-}
 
 
 
@@ -696,7 +718,7 @@ li {
 }
 
 .contact__heading3{
-	font-size: 20px;
+	font-size: 24px;
 }
 
 .sns-icon{

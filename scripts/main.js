@@ -144,6 +144,7 @@ createModal("kinder-modal", "headingKinder");
 createModal("nutritionist-modal", "headingNutritionist");
 createModal("school-clerical-modal", "headingSchoolClerical");
 createModal("young-modal", "headingYoung");
+createModal("etc-modal","headingEtc");
 
 // {
 // 	const close = document.getElementById('close');

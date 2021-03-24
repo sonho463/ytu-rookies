@@ -133,3 +133,22 @@
 .g-form__box{
 	height: 1400px;
 }
+
+// -------------
+// 専門部という活動があります
+// -------------
+
+.spe-heading__wrapper {
+	background-color: white;
+	justify-content: space-around;
+	div {
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+.spe__article {
+	width: 45%;
+	margin-bottom: 10px;
+}
