@@ -140,6 +140,11 @@ li {
   margin-bottom: 0;
 }
 
+.sp-menu-open {
+  position: relative;
+  z-index: 9999;
+}
+
 .sp-menu-open > span:nth-child(1) {
   transform: translateY(10px) rotate(135deg);
 }

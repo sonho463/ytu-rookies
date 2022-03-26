@@ -167,6 +167,8 @@ li {
 }
 
 .sp-menu-open {
+	position: relative;
+	z-index: 9999;
 	& > span {
 		&:nth-child(1) {
 			transform: translateY(10px) rotate(135deg);
